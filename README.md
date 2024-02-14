@@ -3,7 +3,7 @@
 The **main.py** script parses the data into a dictionary object using the **Session.py** and **Trial.py** scripts.
 This dictionary can then be used for further processing in the other scripts.
 
-Each of the following scripts produces plots or generates excel files that can analysed in R: 
+Each of the following scripts produces plots or generates Excel files that can be further analysed in R: 
 - **GeneratePlots.py**
 - **IndividualPerformance.py** (uses **type_2_ROC.py**)
 - **InteractiveTrajectoryAnalysis.py**
