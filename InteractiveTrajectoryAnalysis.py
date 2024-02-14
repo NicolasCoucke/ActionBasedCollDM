@@ -26,7 +26,7 @@ from mne.stats import f_threshold_mway_rm, f_mway_rm, fdr_correction
 
 
 
-path = r"C:\Users\Administrator\Documents\GAMEDATA\TouchDM"
+path = r"your path"
 os.chdir(path)
 
 with open(r"TrajectoryMatrices.pickle", "rb") as input_file:
@@ -160,22 +160,8 @@ for group_size_idx, group_size in enumerate(range(2, 5)):
                             leader_trajectory = np.mean(trial_trajectories[leaders,:], axis = 0)
                             follower_trajectory = np.mean(np.delete(trial_trajectories,leaders,axis=0), axis = 0)
 
-                            trajectory_difference = (leader_trajectory - follower_trajectory) #/ (leader_trajectory + follower_trajectory)
-
-                            # check where artefact comes from
-                            """
-                            if np.max(player_confidence[leaders]) < np.max(follower_confidences):
-                                if player_correct[leaders[0]] == 0:
-                                    if (p_correct == 0) and (p_conf == 0):
-                                        ax.plot(leader_trajectory, linewidth = 1)
-                                        ax.plot(follower_trajectory)
-                                        if np.min(trajectory_difference) < -4:
-                                            print(session)
-                                            print(trial)
-                            """
-
+                            trajectory_difference = (leader_trajectory - follower_trajectory) 
                             trajectory_array = np.vstack((trajectory_array, trajectory_difference.reshape(1,1000)))
-                           #print(np.size(trajectory_array))
 
                 # Store label for the legend
                 red_cmap = plt.get_cmap('Reds')

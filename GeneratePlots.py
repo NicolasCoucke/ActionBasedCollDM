@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 import pickle
 from matplotlib import animation
 import matplotlib as mpl
-mpl.rcParams['animation.ffmpeg_path'] = r'C:\Users\Administrator\PycharmProjects\ffmpeg-master-latest-win64-gpl\bin\ffmpeg'
 import re
 import seaborn as sns
 from scipy.optimize import curve_fit

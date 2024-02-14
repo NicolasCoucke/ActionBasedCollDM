@@ -119,7 +119,7 @@ def plot_clusters(significant_clusters, labels, pvals):
 
 
 
-path = r"C:\Users\Administrator\Documents\GAMEDATA\TouchDM"
+path = r"your path"
 os.chdir(path)
 
 
@@ -342,12 +342,6 @@ for file in file_names:
 
     speed_clusters.append(significant_clusters_correct_distance)
     speed_pvals.append(significant_pvals_correct_distance)
-
-STOP
-##############
-#############
-#############
-
 
 
 

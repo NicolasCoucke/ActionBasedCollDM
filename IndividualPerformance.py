@@ -23,10 +23,9 @@ import matplotlib.pyplot as plt
 matplotlib.use('TkAgg')
 
 
-path = r"C:\Users\Administrator\Documents\GAMEDATA\TouchDM"
+path = r"your path"
 os.chdir(path)
 
-df = pd.read_excel(r'Questionnaire__Optimal_Embodied_Collective_Decision_Making.xlsx', sheet_name='Quanti')
 
 
 with open(r"TouchDataDictionary.pickle", "rb") as input_file:

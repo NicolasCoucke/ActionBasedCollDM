@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 #matplotlib.use('TkAgg')
 
 
-path = r"C:\Users\Administrator\Documents\GAMEDATA\TouchDM"
+path = r"your path"
 os.chdir(path)
 
 
@@ -126,6 +126,8 @@ def create_data(path):
 
 
 
-
 create_data(path)
 
+
+with open(r"TouchDataDictionary.pickle", "wb") as output_file:
+     pickle.dump(Data_dictionary, output_file, protocol=pickle.HIGHEST_PROTOCOL)

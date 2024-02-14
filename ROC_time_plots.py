@@ -25,10 +25,10 @@ import matplotlib.pyplot as plt
 
 matplotlib.use('TkAgg')
 
-path = r"C:\Users\Administrator\Documents\GAMEDATA\TouchDM"
+path = r"your path"
 os.chdir(path)
 
-with open(r"TouchDataDictionaryv255.pickle", "rb") as input_file:
+with open(r"TouchDataDictionary.pickle", "rb") as input_file:
     Data_dictionary = pickle.load(input_file)
 
 
@@ -83,26 +83,6 @@ for time_bin in range(10):
         if np.max(session.invalid_answers) > 32:
             continue
 
-        """
-        all_speeds = []
-        # first get all speed values in threshold:
-        for trial in session.TrialList:
-            if trial.Condition == 2:
-                continue
-            for p in range(session.PlayerSize):
-                if (trial.Guiding[p] != -1) and (trial.Confidences[p] in [1, 2, 3, 4]):
-                    x_positions = np.array(trial.Players_x[p])
-                    y_positions = np.array(trial.Players_y[p])
-    
-                    # get speed at beginning (first cluster)
-                    xmin = 0
-                    xmax = 113
-                    speed = get_speed_measure(x_positions, y_positions, xmin, xmax)
-                    all_speeds.append(speed)
-    
-        # Calculate the quartiles for binning
-        quartiles = np.percentile(all_speeds, [25, 50, 75])
-        """
 
         # now calculate the measure for the participants
         for p in range(session.PlayerSize):

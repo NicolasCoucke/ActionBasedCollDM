@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 matplotlib.use('TkAgg')
 
 
-path = r"C:\Users\Administrator\Documents\GAMEDATA\TouchDM"
+path = r"your path"
 os.chdir(path)
 
 
